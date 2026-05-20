@@ -1,0 +1,159 @@
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ── Background image layer ── */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Color overlays ── */
+.hero-ov {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 61, 107, 0.82)   0%,
+    rgba(30, 140, 206, 0.55) 50%,
+    rgba(46, 155, 88, 0.65)  100%
+  );
+  z-index: 1;
+}
+
+.hero-gr {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--sky-dd)    0%,
+    var(--sky-d)    25%,
+    var(--sky)      55%,
+    var(--green-400) 100%
+  );
+  opacity: 0.55;
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+/* ── Content ── */
+.hero-ct {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  padding-top: 7rem;
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  animation: fu 0.8s ease;
+}
+
+.hero-badge .dot {
+  width: 8px;
+  height: 8px;
+  background: var(--green-200);
+  border-radius: 50%;
+  animation: pu 2s infinite;
+}
+
+/* Logo row inside hero */
+.hero-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-logo-row img {
+  height: 80px;
+  width: auto;
+  filter: brightness(10);
+}
+
+/* Heading */
+.hero h1 {
+  font-family: var(--fd);
+  font-size: clamp(3rem, 6.5vw, 4.8rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  animation: fu 0.8s 0.15s ease both;
+}
+
+.hero h1 .acc {
+  background: linear-gradient(135deg, var(--orange-g), var(--green-200));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Description */
+.hero-desc {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 580px;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  animation: fu 0.8s 0.3s ease both;
+}
+
+/* CTA buttons row */
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  animation: fu 0.8s 0.45s ease both;
+}
+
+/* Stats row */
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  animation: fu 0.8s 0.6s ease both;
+}
+
+.hero-stat-v {
+  font-family: var(--fd);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.hero-stat-l {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

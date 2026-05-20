@@ -1,0 +1,106 @@
+/* ============================================================
+   BUTTONS — All variants
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 34px;
+  border-radius: var(--rr);
+  font-family: var(--fb);
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+}
+
+/* White — used on hero (dark background) */
+.btn-w {
+  background: #fff;
+  color: var(--sky-dd);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.btn-w:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Ghost — used on hero (dark background) */
+.btn-g {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+}
+.btn-g:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Orange solid */
+.btn-o {
+  background: var(--orange);
+  color: #fff;
+}
+.btn-o:hover {
+  background: var(--orange-l);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(212, 113, 10, 0.25);
+}
+
+/* Orange outlined */
+.btn-ol {
+  background: transparent;
+  color: var(--td);
+  border: 2px solid var(--green-400);
+}
+.btn-ol:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+/* Large modifier — used in uniq section CTA */
+.btn-lg {
+  font-size: 1.1rem;
+  padding: 18px 44px;
+}
+
+/* White solid — used inside dark CTA box */
+.btn-wh {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 36px;
+  background: #fff;
+  color: var(--green-800);
+  font-weight: 800;
+  font-size: 1rem;
+  border-radius: var(--rr);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-wh:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Outlined white — used inside dark CTA box */
+.btn-ow {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 36px;
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: var(--rr);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-ow:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}

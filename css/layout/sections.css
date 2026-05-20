@@ -1,0 +1,68 @@
+/* ============================================================
+   SECTION WRAPPERS & SHARED HEADINGS
+   ============================================================ */
+
+/* ── Section base ── */
+.sec   { padding: 5rem 0; }
+.sec-g { background: var(--bg2); }
+.sec-w { background: var(--bgw); }
+.sec-l { background: var(--bg); }
+.sec-b { background: var(--bg3); }
+
+/* ── Section tag (eyebrow label) ── */
+.stag {
+  font-family: var(--fm);
+  font-size: 0.78rem;
+  color: var(--orange);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+}
+
+.stag::before {
+  content: '';
+  width: 40px;
+  height: 3px;
+  background: var(--orange);
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+/* Tag row with logo */
+.stag-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.stag-row img {
+  height: 55px;
+  width: auto;
+}
+
+.stag-row .stag { margin-bottom: 0; }
+
+/* ── Section title ── */
+.stit {
+  font-family: var(--fh);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  color: var(--td);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.stit .o { color: var(--orange); }
+.stit .g { color: var(--green-400); }
+
+/* ── Section description ── */
+.sdesc {
+  font-size: 1.05rem;
+  color: var(--tmu);
+  max-width: 600px;
+}

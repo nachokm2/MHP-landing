@@ -1,0 +1,235 @@
+/* ============================================================
+   CARDS — Services, Value props, Architecture nodes
+   ============================================================ */
+
+/* ──────────────────────────────────
+   Service Cards
+   ────────────────────────────────── */
+
+.srv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.srv-card {
+  background: var(--bgc);
+  border-radius: var(--rl);
+  padding: 2rem;
+  border: 1px solid var(--bd);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+/* Top accent bar on hover */
+.srv-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--orange), var(--green-400));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+
+.srv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  border-color: var(--orange-100);
+}
+
+.srv-card:hover::before { transform: scaleX(1); }
+
+.srv-ico {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--rr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  font-size: 1.6rem;
+}
+
+.srv-ico.bl { background: var(--orange-50); }
+.srv-ico.gr { background: var(--green-50); }
+
+.srv-num {
+  font-family: var(--fd);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--tll);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.srv-card h3 {
+  font-family: var(--fd);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--td);
+  margin-bottom: 0.6rem;
+}
+
+.srv-card p {
+  font-size: 0.93rem;
+  color: var(--tmu);
+  line-height: 1.6;
+}
+
+.srv-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--orange);
+  margin-top: 1rem;
+  transition: gap 0.3s;
+}
+
+.srv-card:hover .srv-link { gap: 12px; }
+
+/* ──────────────────────────────────
+   Value Proposition Cards
+   ────────────────────────────────── */
+
+.val-gr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.val-c {
+  background: var(--bgc);
+  border: 1px solid var(--bd);
+  border-radius: var(--rl);
+  padding: 2rem;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bottom accent bar on hover */
+.val-c::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 3px;
+  background: linear-gradient(90deg, var(--orange), var(--green-400));
+  transform: scaleX(0);
+  transition: transform 0.4s;
+  border-radius: 3px;
+}
+
+.val-c:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(30, 51, 38, 0.08);
+}
+
+.val-c:hover::after { transform: scaleX(1); }
+
+.val-i {
+  width: 48px;
+  height: 48px;
+  background: var(--orange-50);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--orange-100);
+}
+
+.val-c h3 {
+  font-family: var(--fh);
+  font-size: 1.3rem;
+  color: var(--td);
+  margin-bottom: 0.5rem;
+}
+
+.val-c p {
+  font-size: 0.88rem;
+  color: var(--tmu);
+  line-height: 1.65;
+}
+
+/* ──────────────────────────────────
+   Architecture Flow Nodes
+   ────────────────────────────────── */
+
+.arch-fl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.arch-s {
+  background: var(--bgc);
+  border: 1px solid var(--bd);
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  width: 165px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 16px rgba(30, 51, 38, 0.05);
+}
+
+.arch-s:hover {
+  border-color: var(--orange);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(212, 113, 10, 0.1);
+}
+
+.arch-sn {
+  font-family: var(--fm);
+  font-size: 0.65rem;
+  color: var(--orange);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.arch-si {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.arch-st {
+  font-weight: 800;
+  font-size: 0.83rem;
+  color: var(--td);
+  line-height: 1.3;
+}
+
+.arch-a {
+  color: var(--orange);
+  font-size: 1.4rem;
+  padding: 0 0.4rem;
+  font-weight: 900;
+}
+
+.arch-note {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--green-600);
+  font-weight: 700;
+  font-size: 0.88rem;
+  background: var(--green-50);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--green-100);
+}

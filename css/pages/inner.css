@@ -1,0 +1,639 @@
+/* ============================================================
+   INNER PAGES — Page hero, gallery grid, service details
+   ============================================================ */
+
+/* ── Nav active state on inner pages ── */
+.nav-links a.active,
+.nav-links a.active:hover    { color: #fff; font-weight: 800; }
+.nav-links a.active::after   { width: 100% !important; }
+.nav.sc .nav-links a.active  { color: var(--orange); }
+
+/* ──────────────────────────────────
+   Page Hero (inner pages, ~55vh)
+   ────────────────────────────────── */
+
+.page-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.page-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+}
+
+.page-hero-ov {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    175deg,
+    rgba(8, 40, 20, 0.25)  0%,
+    rgba(15, 77, 37, 0.65) 55%,
+    rgba(15, 77, 37, 0.94) 100%
+  );
+  z-index: 1;
+}
+
+.page-hero-ct {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 0 3.5rem;
+  width: 100%;
+}
+
+.page-eyebrow {
+  font-family: var(--fm);
+  font-size: 0.78rem;
+  color: var(--orange-g);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: var(--orange-g);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.page-hero-ct h1 {
+  font-family: var(--fh);
+  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  color: #fff;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  margin-bottom: 1rem;
+}
+
+.page-hero-ct h1 .o { color: var(--orange-g); }
+.page-hero-ct h1 .g { color: var(--green-200); }
+
+.page-hero-ct .hero-lead {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 620px;
+  line-height: 1.65;
+}
+
+/* ──────────────────────────────────
+   Gallery Grid
+   ────────────────────────────────── */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--rl);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.gallery-item:hover img { transform: scale(1.06); }
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 1.25rem 1rem;
+  background: linear-gradient(transparent, rgba(15, 77, 37, 0.88));
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: var(--fm);
+  letter-spacing: 0.04em;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption { transform: translateY(0); }
+
+/* Wide item spans 2 columns */
+.gallery-item.wide {
+  grid-column: span 2;
+  aspect-ratio: 16 / 7;
+}
+
+/* 2-column gallery variant */
+.gallery-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+/* ──────────────────────────────────
+   Service Detail Sections (alternating layout)
+   ────────────────────────────────── */
+
+.srv-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--bd);
+}
+
+.srv-detail:last-child { border-bottom: none; }
+
+.srv-detail.reverse .srv-detail-img { order: 2; }
+.srv-detail.reverse .srv-detail-txt { order: 1; }
+
+.srv-detail-img {
+  border-radius: var(--rx);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.srv-detail-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.srv-detail-num {
+  font-family: var(--fm);
+  font-size: 0.75rem;
+  color: var(--orange);
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+.srv-detail h3 {
+  font-family: var(--fh);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--td);
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.srv-detail p {
+  font-size: 1rem;
+  color: var(--tm);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.srv-detail-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.srv-detail-list li {
+  font-size: 0.9rem;
+  color: var(--td);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.srv-detail-list li::before {
+  content: '▸';
+  color: var(--orange);
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+/* ──────────────────────────────────
+   Company Values Grid (nosotros)
+   ────────────────────────────────── */
+
+.values-gr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.value-c {
+  background: var(--bgc);
+  border: 1px solid var(--bd);
+  border-radius: var(--rl);
+  padding: 2rem;
+  text-align: center;
+}
+
+.value-c .vi {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--green-50), var(--orange-50));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin: 0 auto 1.25rem;
+  border: 1px solid var(--green-100);
+}
+
+.value-c h4 {
+  font-family: var(--fh);
+  font-size: 1.3rem;
+  color: var(--td);
+  margin-bottom: 0.5rem;
+}
+
+.value-c p {
+  font-size: 0.88rem;
+  color: var(--tmu);
+  line-height: 1.65;
+}
+
+/* ──────────────────────────────────
+   Equipment Diagram / Info Image
+   ────────────────────────────────── */
+
+.diagram-box {
+  background: var(--bgc);
+  border: 1px solid var(--bd);
+  border-radius: var(--rl);
+  overflow: hidden;
+  margin-top: 2.5rem;
+}
+
+.diagram-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.diagram-caption {
+  padding: 1rem 1.5rem;
+  font-family: var(--fm);
+  font-size: 0.78rem;
+  color: var(--tmu);
+  letter-spacing: 0.05em;
+  border-top: 1px solid var(--bd);
+}
+
+/* ──────────────────────────────────
+   MONCON teaser box (on home page)
+   ────────────────────────────────── */
+
+.moncon-teaser {
+  background: linear-gradient(135deg, var(--sky-dd) 0%, var(--sky-d) 40%, var(--sky) 70%, var(--green-400) 100%);
+  border-radius: var(--rx);
+  padding: 3.5rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.moncon-teaser::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.moncon-teaser-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--rl);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 2px solid rgba(255,255,255,.2);
+}
+
+.moncon-teaser-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.moncon-teaser h2 {
+  font-family: var(--fh);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.moncon-teaser h2 span { color: var(--orange-g); }
+
+.moncon-teaser p {
+  font-size: 1rem;
+  color: rgba(255,255,255,.82);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.moncon-teaser-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.moncon-teaser-benefit {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.93rem;
+  color: rgba(255,255,255,.9);
+  font-weight: 600;
+}
+
+.moncon-teaser-benefit .bc {
+  width: 22px;
+  height: 22px;
+  background: rgba(255,255,255,.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: var(--green-200);
+  flex-shrink: 0;
+}
+
+/* Equipment teaser on home */
+.eq-teaser {
+  position: relative;
+  border-radius: var(--rx);
+  overflow: hidden;
+  margin-top: 2.5rem;
+}
+
+.eq-teaser img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  object-position: center 70%;
+  display: block;
+}
+
+.eq-teaser-ov {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(15,77,37,.85) 0%, rgba(15,77,37,.4) 60%, transparent 100%);
+  display: flex;
+  align-items: center;
+}
+
+.eq-teaser-txt {
+  padding: 3rem 3.5rem;
+  max-width: 480px;
+}
+
+.eq-teaser-txt h2 {
+  font-family: var(--fh);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.eq-teaser-txt h2 span { color: var(--orange-g); }
+
+.eq-teaser-txt p {
+  font-size: 1rem;
+  color: rgba(255,255,255,.82);
+  line-height: 1.65;
+  margin-bottom: 1.5rem;
+}
+
+/* ──────────────────────────────────
+   CEO Profile Card (nosotros)
+   ────────────────────────────────── */
+
+.ceo-card {
+  display: grid;
+  grid-template-columns: 80px 1fr 1.15fr;
+  gap: 2.5rem;
+  background: var(--green-800);
+  border-radius: var(--rx);
+  padding: 2.5rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.ceo-avatar {
+  width: 80px;
+  height: 80px;
+  background: var(--orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fh);
+  font-size: 2rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.ceo-name {
+  font-family: var(--fh);
+  font-size: 1.75rem;
+  color: #fff;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.ceo-role {
+  color: var(--orange-g);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0.3rem 0 1.1rem;
+}
+
+.ceo-creds {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 1.1rem;
+}
+
+.ceo-cred {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.72);
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--orange);
+  line-height: 1.4;
+}
+
+.ceo-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.ceo-badge {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.9);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-family: var(--fd);
+}
+
+a.ceo-client-lnk {
+  cursor: pointer;
+  border-color: rgba(255,255,255,0.22);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+a.ceo-client-lnk:hover {
+  background: rgba(212,113,10,0.18);
+  border-color: var(--orange-g);
+  color: var(--orange-g);
+}
+
+.ceo-tray-label {
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--orange-g);
+  margin-bottom: 0.75rem;
+}
+
+.ceo-clients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.ceo-client {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.11);
+  color: rgba(255,255,255,0.82);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: var(--rr);
+  white-space: nowrap;
+}
+
+/* ──────────────────────────────────
+   Misión / Visión / Propuesta (nosotros)
+   ────────────────────────────────── */
+
+.mvv-gr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 2.5rem;
+}
+
+.mvv-c {
+  background: var(--bgw);
+  border-radius: var(--rl);
+  padding: 2.25rem;
+  border: 1px solid var(--bd);
+  display: flex;
+  flex-direction: column;
+}
+
+.mvv-eyebrow {
+  font-family: var(--fh);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  color: var(--orange);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.mvv-c h3 {
+  font-family: var(--fh);
+  font-size: 1.55rem;
+  color: var(--td);
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.mvv-c p {
+  font-size: 0.88rem;
+  line-height: 1.78;
+  color: var(--tm);
+  flex: 1;
+}
+
+.mvv-lnk {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1.25rem;
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 0.86rem;
+  text-decoration: none;
+  transition: gap 0.2s;
+}
+
+.mvv-lnk:hover { gap: 0.6rem; }
+
+/* ──────────────────────────────────
+   Responsive overrides
+   ────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .gallery-grid          { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid-2        { grid-template-columns: 1fr; }
+  .gallery-item.wide     { grid-column: span 1; aspect-ratio: 4/3; }
+  .srv-detail            { grid-template-columns: 1fr; gap: 2rem; }
+  .srv-detail.reverse .srv-detail-img,
+  .srv-detail.reverse .srv-detail-txt { order: unset; }
+  .srv-detail-list       { grid-template-columns: 1fr; }
+  .values-gr             { grid-template-columns: repeat(2, 1fr); }
+  .moncon-teaser         { grid-template-columns: 1fr; padding: 2.5rem 2rem; }
+  .eq-teaser img         { height: 280px; }
+  .eq-teaser-txt         { padding: 2rem; }
+  .ceo-card              { grid-template-columns: 1fr; gap: 1.5rem; }
+  .ceo-avatar            { width: 60px; height: 60px; font-size: 1.5rem; }
+  .mvv-gr                { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid          { grid-template-columns: 1fr; }
+  .values-gr             { grid-template-columns: 1fr; }
+  .page-hero             { min-height: 45vh; }
+}

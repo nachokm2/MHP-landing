@@ -1,0 +1,105 @@
+/* ============================================================
+   EQUIPMENT CATEGORIES & "FIRST IN CHILE" SECTION
+   ============================================================ */
+
+/* ── Equipment grid ── */
+.eq-gr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.eq-c {
+  background: var(--bgc);
+  border: 1px solid var(--bd);
+  border-radius: var(--rl);
+  padding: 2rem;
+}
+
+.eq-c.mo { border-top: 4px solid var(--orange); }
+.eq-c.st { border-top: 4px solid var(--green-400); }
+
+.eq-t {
+  font-family: var(--fh);
+  font-size: 1.4rem;
+  color: var(--orange);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eq-c.st .eq-t { color: var(--green-600); }
+
+.eq-l li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--bd);
+  font-size: 0.93rem;
+  color: var(--tm);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eq-l li::before {
+  content: '▸';
+  color: var(--orange);
+  font-weight: 900;
+}
+
+.eq-c.st .eq-l li::before { color: var(--green-400); }
+.eq-l li:last-child         { border-bottom: none; }
+
+/* ── "First in Chile" section ── */
+.uniq {
+  background: linear-gradient(
+    135deg,
+    var(--green-50)  0%,
+    var(--bg)        50%,
+    var(--orange-50) 100%
+  );
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.uniq-logo {
+  height: 80px;
+  width: auto;
+  margin: 0 auto 1.5rem;
+}
+
+.uniq-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--orange-50);
+  border: 2px solid var(--orange);
+  border-radius: 50px;
+  padding: 10px 28px;
+  font-family: var(--fm);
+  font-size: 0.82rem;
+  color: var(--orange);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.uniq-t {
+  font-family: var(--fh);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--td);
+  margin-bottom: 1.5rem;
+}
+
+.uniq-t .o { color: var(--orange); }
+
+.uniq-sub {
+  font-size: 1.15rem;
+  color: var(--tm);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}

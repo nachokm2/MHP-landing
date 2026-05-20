@@ -1,0 +1,27 @@
+# Imágenes originales sin procesar (ya están en assets/images/)
+/Images/
+
+# Backups generados
+assets/images/mhp-logo-original.png
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Build artifacts (if tooling is added later)
+dist/
+node_modules/
+
+# Environment
+.env
+.env.local

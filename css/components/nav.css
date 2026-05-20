@@ -1,0 +1,112 @@
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 0.9rem 0;
+  transition: all 0.4s;
+}
+
+/* Scrolled state — glassmorphism effect */
+.nav.sc {
+  background: rgba(240, 247, 242, 0.96);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.08);
+  padding: 0.6rem 0;
+}
+
+.nav-in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ── Logo ── */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--fd);
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: #fff;
+  transition: color 0.4s;
+}
+
+.nav-logo img {
+  height: 72px;
+  width: 72px;
+  object-fit: contain;
+  transition: filter 0.4s;
+  filter: brightness(0) invert(1);
+}
+
+.nav.sc .nav-logo img {
+  filter: none;
+}
+
+.nav-logo em {
+  font-style: normal;
+  color: var(--orange-l);
+}
+
+.nav.sc .nav-logo     { color: var(--td); }
+.nav.sc .nav-logo em  { color: var(--orange); }
+
+/* ── Links ── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 4px 0;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--orange-l);
+  transition: width 0.3s;
+  border-radius: 2px;
+}
+
+.nav-links a:hover           { color: #fff; }
+.nav-links a:hover::after    { width: 100%; }
+
+.nav.sc .nav-links a         { color: var(--tmu); }
+.nav.sc .nav-links a:hover   { color: var(--orange); }
+.nav.sc .nav-links a::after  { background: var(--orange); }
+
+/* ── CTA Button in Nav ── */
+.nav-cta {
+  background: var(--orange) !important;
+  color: #fff !important;
+  padding: 10px 22px !important;
+  border-radius: var(--rr);
+  font-weight: 800 !important;
+}
+
+.nav-cta:hover {
+  background: var(--orange-l) !important;
+  transform: translateY(-1px);
+}
+
+.nav-cta::after { display: none !important; }

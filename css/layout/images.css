@@ -1,0 +1,76 @@
+/* ============================================================
+   IMAGE LAYOUT PATTERNS
+   ============================================================ */
+
+/* ── Two-column strip (inside dashboard area) ── */
+.img-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.img-strip img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid var(--bd);
+}
+
+/* ── Three-column row ── */
+.img-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.img-row img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid var(--bd);
+  transition: all 0.3s;
+}
+
+.img-row img:hover {
+  border-color: var(--orange);
+  transform: scale(1.02);
+}
+
+.img-cap {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--tl);
+  margin-top: 0.4rem;
+  font-weight: 600;
+  font-family: var(--fm);
+  letter-spacing: 0.05em;
+}
+
+/* ── Full-width banner ── */
+.img-banner {
+  width: 100%;
+  border-radius: var(--rl);
+  overflow: hidden;
+  margin-top: 2.5rem;
+  position: relative;
+}
+
+.img-banner img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.img-banner-ov {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(212, 113, 10, 0.12) 0%,
+    rgba(46, 155, 88, 0.08)  100%
+  );
+}

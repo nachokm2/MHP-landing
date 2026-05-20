@@ -1,0 +1,57 @@
+/* ============================================================
+   DESIGN TOKENS — Edit here to retheme the entire site
+   ============================================================ */
+
+:root {
+  /* ── Brand: Orange ── */
+  --orange:     #D4710A;
+  --orange-l:   #F5A623;
+  --orange-g:   #FCC97A;
+  --orange-50:  #FEF0E1;
+  --orange-100: #FCDDB3;
+
+  /* ── Brand: Green ── */
+  --green-50:  #E6F5EC;
+  --green-100: #C2E8D0;
+  --green-200: #7DD4A0;
+  --green-400: #2E9B58;
+  --green-600: #1A7A3A;
+  --green-800: #0F4D25;
+
+  /* ── Brand: Sky Blue ── */
+  --sky:    #1E8CCE;
+  --sky-d:  #0B5FA5;
+  --sky-dd: #083D6B;
+
+  /* ── Backgrounds ── */
+  --bg:  #EFF7F1;
+  --bg2: #E2F0E6;
+  --bg3: #E8F1EA;
+  --bgw: #FDF8F2;
+  --bgc: #FAFDFB;
+
+  /* ── Text ── */
+  --td:  #1E3326;
+  --tm:  #3A5E42;
+  --tmu: #5E8A68;
+  --tl:  #8A9BAA;
+  --tll: #A8CDB0;
+
+  /* ── Border ── */
+  --bd: rgba(30, 51, 38, 0.1);
+
+  /* ── Typography ── */
+  --fd: 'Outfit', sans-serif;       /* Display / UI */
+  --fb: 'Barlow', sans-serif;       /* Body text    */
+  --fm: 'JetBrains Mono', monospace;/* Mono / tags  */
+  --fh: 'Bebas Neue', sans-serif;   /* Headings     */
+
+  /* ── Border Radius ── */
+  --rr: 8px;   /* Small  */
+  --rl: 16px;  /* Medium */
+  --rx: 24px;  /* Large  */
+
+  /* ── Breakpoints (CSS-only reference, used in responsive.css) ── */
+  /* --bp-md: 900px */
+  /* --bp-sm: 600px */
+}

@@ -1,0 +1,21 @@
+/* ============================================================
+   KEYFRAME ANIMATIONS
+   ============================================================ */
+
+/* Fade Up — used in hero section */
+@keyframes fu {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Pulse — used in live indicator dots */
+@keyframes pu {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.3); }
+}
+
+/* Scroll — used in ticker marquee (-50% because content is doubled for seamless loop) */
+@keyframes sc {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

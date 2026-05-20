@@ -1,0 +1,295 @@
+/* ============================================================
+   MONCON ON LINE 24/7 — Section, Dashboard & Parameters
+   ============================================================ */
+
+/* ── Section wrapper ── */
+.moncon-hero {
+  background: linear-gradient(
+    135deg,
+    var(--bg2)        0%,
+    var(--green-50)  40%,
+    var(--orange-50) 100%
+  );
+  padding: 5rem 0;
+  position: relative;
+}
+
+/* Gradient underline */
+.moncon-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green-400), var(--orange), var(--green-400));
+}
+
+.moncon-gr {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* ── Eyebrow label ── */
+.moncon-ey {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--fm);
+  font-size: 0.78rem;
+  color: var(--orange);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.moncon-ey .pd {
+  width: 8px;
+  height: 8px;
+  background: var(--orange);
+  border-radius: 50%;
+  animation: pu 2s infinite;
+  box-shadow: 0 0 10px rgba(212, 113, 10, 0.4);
+}
+
+/* ── Logo + title row ── */
+.moncon-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.moncon-logo-row img {
+  height: 85px;
+  width: auto;
+}
+
+/* ── Main heading ── */
+.moncon-h1 {
+  font-family: var(--fh);
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 0.92;
+  color: var(--td);
+  margin-bottom: 1rem;
+}
+
+.moncon-h1 .l2 {
+  display: block;
+  color: var(--orange-l);
+}
+
+/* ── Description ── */
+.moncon-sub {
+  font-size: 1.1rem;
+  color: var(--tm);
+  max-width: 520px;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.moncon-sub strong {
+  color: var(--td);
+  font-weight: 800;
+}
+
+/* ── CTA buttons row ── */
+.moncon-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ──────────────────────────────────
+   Dashboard Widget
+   ────────────────────────────────── */
+
+.dash {
+  background: var(--bgc);
+  border: 1px solid var(--bd);
+  border-radius: var(--rl);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(30, 51, 38, 0.08);
+}
+
+/* Top gradient bar */
+.dash::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--orange), var(--orange-l), var(--green-400));
+}
+
+.dash-hd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--bd);
+}
+
+.dash-tt {
+  font-family: var(--fm);
+  font-size: 0.72rem;
+  color: var(--tmu);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.dash-lv {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--fm);
+  font-size: 0.7rem;
+  color: var(--green-400);
+  font-weight: 700;
+}
+
+.dash-lv .d {
+  width: 6px;
+  height: 6px;
+  background: var(--green-400);
+  border-radius: 50%;
+  animation: pu 1.5s infinite;
+  box-shadow: 0 0 6px rgba(46, 155, 88, 0.5);
+}
+
+/* Metrics grid */
+.dash-m {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.mc {
+  background: var(--bg2);
+  border-radius: 10px;
+  padding: 0.9rem;
+  border: 1px solid var(--bd);
+}
+
+.mc-l {
+  font-size: 0.65rem;
+  color: var(--tmu);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+
+.mc-v {
+  font-family: var(--fh);
+  font-size: 1.6rem;
+  color: var(--orange);
+  line-height: 1;
+}
+
+.mc-v.g { color: var(--green-400); }
+.mc-v.b { color: var(--sky); }
+.mc-v.mc-warn { color: var(--orange-l); }
+
+@keyframes mc-upd {
+  0%   { opacity: 0.35; transform: translateY(-3px) scale(1.06); }
+  60%  { transform: translateY(1px) scale(1.01); }
+  100% { opacity: 1;    transform: translateY(0)  scale(1); }
+}
+
+.mc-v.mc-upd {
+  animation: mc-upd 0.45s cubic-bezier(.22,.68,0,1.2) forwards;
+}
+
+.mc-u {
+  font-size: 0.65rem;
+  color: var(--tl);
+  margin-top: 2px;
+}
+
+/* Chart waveform area */
+.dash-w {
+  height: 50px;
+  background: var(--bg2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dash-w svg {
+  width: 100%;
+  height: 100%;
+}
+
+.wl {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+/* ──────────────────────────────────
+   Measured Parameters Grid
+   ────────────────────────────────── */
+
+.par-gr {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.par-c {
+  background: var(--bgc);
+  border: 1px solid var(--bd);
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.par-c::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+
+.par-c:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(212, 113, 10, 0.1);
+  border-color: var(--orange-g);
+}
+
+.par-c:hover::before { transform: scaleX(1); }
+
+.par-i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.par-n {
+  font-family: var(--fh);
+  font-size: 1.1rem;
+  color: var(--orange);
+  margin-bottom: 0.5rem;
+}
+
+.par-d {
+  font-size: 0.8rem;
+  color: var(--tmu);
+  line-height: 1.5;
+}
