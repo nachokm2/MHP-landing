@@ -6,10 +6,14 @@ export function initNav() {
   if (!nav) return;
 
   // Scroll glassmorphism
-  const SCROLL_THRESHOLD = 80;
-  const update = () => nav.classList.toggle('sc', window.scrollY > SCROLL_THRESHOLD);
-  window.addEventListener('scroll', update, { passive: true });
-  update();
+  if (nav.dataset.static !== undefined) {
+    nav.classList.add('sc');
+  } else {
+    const SCROLL_THRESHOLD = 80;
+    const update = () => nav.classList.toggle('sc', window.scrollY > SCROLL_THRESHOLD);
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  }
 
   // Active page link
   const page = window.location.pathname.split('/').pop() || 'index.html';

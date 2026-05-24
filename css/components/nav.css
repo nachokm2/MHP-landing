@@ -42,15 +42,12 @@
 }
 
 .nav-logo img {
-  height: 72px;
-  width: 72px;
+  height: 100px;
+  width: auto;
+  max-width: 320px;
   object-fit: contain;
-  transition: filter 0.4s;
-  filter: brightness(0) invert(1);
-}
-
-.nav.sc .nav-logo img {
-  filter: none;
+  border-radius: 6px;
+  transition: opacity 0.4s;
 }
 
 .nav-logo em {

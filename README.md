@@ -1,4 +1,4 @@
-# MHP SPA — Sitio Web Corporativo
+﻿# MHP SPA — Sitio Web Corporativo
 
 Sitio web de marketing para **MHP SPA**, empresa chilena de ingeniería industrial especializada en climatización vehicular, mantenimiento de maquinaria pesada, gestión de activos y el producto flagship **MONCON ON LINE 24/7** — sistema de monitoreo continuo de condiciones para faenas mineras.
 
@@ -287,6 +287,6 @@ git merge develop
 | Campo    | Valor                          |
 |----------|-------------------------------|
 | Empresa  | MHP SPA                       |
-| Teléfono | +56 9 6247 1506               |
+| Teléfono | +56 9 7544 2496               |
 | Email    | gerencia@mhproyectos.cl       |
 | Sede     | Chicureo, Colina — Santiago   |

@@ -99,3 +99,40 @@
   font-size: 0.8rem;
   flex-shrink: 0;
 }
+
+/* ── Valor box (dark card with values list) ── */
+.valor-box {
+  background: var(--td);
+  border-radius: var(--rl);
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.valor-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+}
+
+.valor-list li {
+  font-size: .95rem;
+  color: rgba(255, 255, 255, .82);
+  line-height: 1.5;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.valor-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--orange-l);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.valor-list strong {
+  color: #fff;
+  font-weight: 700;
+}

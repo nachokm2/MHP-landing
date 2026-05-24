@@ -557,11 +557,24 @@ a.ceo-client-lnk:hover {
    Misión / Visión / Propuesta (nosotros)
    ────────────────────────────────── */
 
+/* Outer wrapper: 3 cards + valor-box side by side */
+.mvv-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 2.5rem;
+}
+
 .mvv-gr {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.75rem;
-  margin-top: 2.5rem;
+}
+
+.mvv-layout > .valor-box {
+  position: sticky;
+  top: 100px;
 }
 
 .mvv-c {
@@ -575,7 +588,7 @@ a.ceo-client-lnk:hover {
 
 .mvv-eyebrow {
   font-family: var(--fh);
-  font-size: 0.78rem;
+  font-size: 1.1rem;
   letter-spacing: 0.2em;
   color: var(--orange);
   margin-bottom: 0.5rem;
@@ -584,15 +597,15 @@ a.ceo-client-lnk:hover {
 
 .mvv-c h3 {
   font-family: var(--fh);
-  font-size: 1.55rem;
+  font-size: 2.4rem;
   color: var(--td);
   margin-bottom: 0.75rem;
   line-height: 1.1;
 }
 
 .mvv-c p {
-  font-size: 0.88rem;
-  line-height: 1.78;
+  font-size: 1.15rem;
+  line-height: 1.75;
   color: var(--tm);
   flex: 1;
 }
@@ -629,6 +642,8 @@ a.ceo-client-lnk:hover {
   .eq-teaser-txt         { padding: 2rem; }
   .ceo-card              { grid-template-columns: 1fr; gap: 1.5rem; }
   .ceo-avatar            { width: 60px; height: 60px; font-size: 1.5rem; }
+  .mvv-layout            { grid-template-columns: 1fr; }
+  .mvv-layout > .valor-box { position: static; }
   .mvv-gr                { grid-template-columns: 1fr; }
 }
 

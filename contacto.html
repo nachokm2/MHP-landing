@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto — MHP SPA</title>
+  <meta name="description" content="Contáctenos para cotizaciones de climatización industrial, mantenimiento de maquinaria pesada, MONCON 24/7 y más. Respondemos en menos de 24 horas hábiles.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base/variables.css">
+  <link rel="stylesheet" href="css/base/reset.css">
+  <link rel="stylesheet" href="css/utilities/animations.css">
+  <link rel="stylesheet" href="css/components/nav.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/cta.css">
+  <link rel="stylesheet" href="css/utilities/responsive.css">
+  <link rel="stylesheet" href="css/pages/inner.css">
+  <link rel="stylesheet" href="css/pages/contacto.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav" data-static role="navigation" aria-label="Navegación principal">
+    <div class="nav-in">
+      <a href="index.html" class="nav-logo" aria-label="MHP SPA — Inicio">
+        <img src="assets/images/mhp-logo-new.png" alt="Logotipo MHP SPA" height="64">
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="climatizacion.html">Climatización</a></li>
+        <li><a href="moncon.html">MONCON 24/7</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="equipos.html">Equipos</a></li>
+        <li><a href="contacto.html" class="nav-cta" aria-current="page">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ══ HERO ══ -->
+    <section class="contact-hero" aria-label="Contacto MHP SPA">
+      <div class="ct">
+        <div class="contact-hero-eyebrow">
+          <div class="contact-hero-eyebrow-tag">Contacto</div>
+        </div>
+        <h1>CONVERSEMOS DE SU <span>PROYECTO</span></h1>
+        <p class="contact-hero-lead">Complete el formulario y nuestro equipo le contactará en menos de 24 horas hábiles.</p>
+      </div>
+    </section>
+
+    <!-- ══ FORMULARIO ══ -->
+    <section class="form-section" aria-labelledby="form-titulo">
+      <div class="ct">
+        <div class="form-grid">
+
+          <!-- FORM CARD -->
+          <div class="form-card" role="region" aria-labelledby="form-titulo">
+            <div class="form-header" id="formHeader">
+              <h2 id="form-titulo">SOLICITUD DE CONTACTO</h2>
+              <p>Todos los campos marcados con * son obligatorios</p>
+            </div>
+
+            <div class="form-body" id="formBody">
+              <form action="https://formsubmit.co/gerencia@mhproyectos.cl" method="POST" id="contactForm">
+                <input type="hidden" name="_subject" value="Nueva solicitud de contacto — MHP SPA">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://hotpink-termite-761974.hostingersite.com/contacto.html?enviado=1">
+                <input type="text" name="_honey" style="display:none" aria-hidden="true">
+
+                <!-- Nombre -->
+                <div class="field">
+                  <label for="f-nombre">Nombre completo <span class="req" aria-label="requerido">*</span></label>
+                  <input type="text" id="f-nombre" name="Nombre" placeholder="Ej: Juan Pérez González" required autocomplete="name">
+                </div>
+
+                <!-- RUT + Empresa -->
+                <div class="field field-row">
+                  <div>
+                    <label for="f-rut">RUT <span class="req" aria-label="requerido">*</span></label>
+                    <div class="rut-wrap">
+                      <input type="text" id="f-rut" name="RUT" placeholder="12.345.678-9" required maxlength="12">
+                      <span class="rut-format" aria-hidden="true">XX.XXX.XXX-X</span>
+                    </div>
+                  </div>
+                  <div>
+                    <label for="f-empresa">Empresa <span class="req" aria-label="requerido">*</span></label>
+                    <input type="text" id="f-empresa" name="Empresa" placeholder="Nombre de su empresa" required autocomplete="organization">
+                  </div>
+                </div>
+
+                <!-- Tipo de solicitud -->
+                <div class="field">
+                  <label for="f-tipo">Tipo de solicitud <span class="req" aria-label="requerido">*</span></label>
+                  <select id="f-tipo" name="Tipo de Solicitud" required>
+                    <option value="" disabled selected>Seleccione una opción...</option>
+                    <optgroup label="Climatización">
+                      <option value="Cotización módulo AC (SW-04 / SW-17)">Cotización módulo AC (SW-04 / SW-17)</option>
+                      <option value="Servicio técnico AC a terreno">Servicio técnico AC a terreno</option>
+                      <option value="Compresores y repuestos AC">Compresores y repuestos AC</option>
+                      <option value="Mantención preventiva AC">Mantención preventiva AC</option>
+                    </optgroup>
+                    <optgroup label="Servicios industriales">
+                      <option value="Mantenimiento maquinaria pesada">Mantenimiento maquinaria pesada</option>
+                      <option value="Gestión de activos">Gestión de activos</option>
+                      <option value="Arriendo de maquinaria">Arriendo de maquinaria</option>
+                      <option value="Fabricación de partes y piezas">Fabricación de partes y piezas</option>
+                      <option value="Importación directa">Importación directa</option>
+                    </optgroup>
+                    <optgroup label="MONCON 24/7">
+                      <option value="Demo MONCON ON LINE 24/7">Demo MONCON ON LINE 24/7</option>
+                      <option value="Cotización monitoreo de condiciones">Cotización monitoreo de condiciones</option>
+                      <option value="Presentación técnica MONCON">Presentación técnica MONCON</option>
+                    </optgroup>
+                    <optgroup label="Otro">
+                      <option value="Consulta general">Consulta general</option>
+                      <option value="Alianza comercial">Alianza comercial</option>
+                      <option value="Postulación laboral">Postulación laboral</option>
+                    </optgroup>
+                  </select>
+                </div>
+
+                <!-- Email + Teléfono -->
+                <div class="field field-row">
+                  <div>
+                    <label for="f-email">Email <span class="req" aria-label="requerido">*</span></label>
+                    <input type="email" id="f-email" name="Email" placeholder="correo@empresa.cl" required autocomplete="email">
+                  </div>
+                  <div>
+                    <label for="f-tel">Teléfono</label>
+                    <input type="tel" id="f-tel" name="Teléfono" placeholder="+56 9 XXXX XXXX" autocomplete="tel">
+                  </div>
+                </div>
+
+                <!-- Faena / Ubicación -->
+                <div class="field">
+                  <label for="f-faena">Faena o ubicación</label>
+                  <input type="text" id="f-faena" name="Faena o Ubicación" placeholder="Ej: Minera Escondida, Antofagasta / Santiago centro">
+                  <div class="hint">Indique la faena, ciudad o dirección donde requiere el servicio</div>
+                </div>
+
+                <!-- Mensaje -->
+                <div class="field">
+                  <label for="f-mensaje">Mensaje o descripción <span class="req" aria-label="requerido">*</span></label>
+                  <textarea id="f-mensaje" name="Mensaje" placeholder="Describa su necesidad, equipo involucrado, marca/modelo, urgencia, etc." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                  Enviar solicitud <span class="arrow" aria-hidden="true">→</span>
+                </button>
+                <p class="form-footer">
+                  Su mensaje llegará a <a href="mailto:gerencia@mhproyectos.cl">gerencia@mhproyectos.cl</a><br>
+                  Respondemos en menos de 24 horas hábiles
+                </p>
+              </form>
+            </div>
+
+            <!-- Estado de éxito -->
+            <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+              <div class="check-circle" aria-hidden="true">✓</div>
+              <h3>SOLICITUD ENVIADA</h3>
+              <p>Gracias por contactarnos. Nuestro equipo revisará su solicitud y le responderá a la brevedad.</p>
+              <p class="form-success-info">gerencia@mhproyectos.cl · +56 9 7544 2496</p>
+            </div>
+          </div>
+
+          <!-- SIDEBAR -->
+          <aside class="sidebar" aria-label="Información de contacto">
+
+            <div class="side-card">
+              <h3>CONTACTO DIRECTO</h3>
+              <div class="side-item">
+                <div class="side-icon or" aria-hidden="true">📞</div>
+                <div>
+                  <div class="side-item-label">Teléfono</div>
+                  <a href="tel:+56975442496" style="color:var(--orange);font-weight:700">+56 9 7544 2496</a>
+                </div>
+              </div>
+              <div class="side-item">
+                <div class="side-icon gr" aria-hidden="true">✉️</div>
+                <div>
+                  <div class="side-item-label">Email</div>
+                  <a href="mailto:gerencia@mhproyectos.cl" style="color:var(--green-600);font-weight:700">gerencia@mhproyectos.cl</a>
+                </div>
+              </div>
+              <div class="side-item">
+                <div class="side-icon bl" aria-hidden="true">📍</div>
+                <div>
+                  <div class="side-item-label">Oficina</div>
+                  <span style="font-weight:600">Chicureo, Colina · Chile</span>
+                </div>
+              </div>
+              <div class="side-item">
+                <div class="side-icon or" aria-hidden="true">🕐</div>
+                <div>
+                  <div class="side-item-label">Horario</div>
+                  <span style="font-weight:600">Lun–Vie 08:00–18:00</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="side-card side-card-urgency">
+              <h3>URGENCIAS EN FAENA</h3>
+              <p>Para emergencias fuera de horario o servicio técnico urgente en faena, contacte directo:</p>
+              <a href="https://wa.me/56975442496" class="side-wa-btn" rel="noopener noreferrer">
+                💬 WhatsApp directo
+              </a>
+              <p class="side-wa-note">Disponible 24/7</p>
+            </div>
+
+            <div class="side-card side-card-accent">
+              <h3>SERVICIO TÉCNICO AC</h3>
+              <p>Atendemos en faena minera, forestal, empresas y a domicilio. Compresores y módulos en stock.</p>
+              <a href="climatizacion.html">Ver servicio AC →</a>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="ct">
+      <div class="ft-gr">
+        <div class="ft-brand">
+          <div class="ft-logo">
+            <img src="assets/images/mhp-logo-new.png" alt="Logotipo MHP SPA" height="44" loading="lazy">
+          </div>
+          <p>Soluciones integrales en climatización industrial, mantenimiento de maquinaria pesada, monitoreo de condiciones y fabricación de partes para la industria chilena.</p>
+        </div>
+        <nav class="ft-col" aria-label="Servicios">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="climatizacion.html">Climatización</a></li>
+            <li><a href="servicios.html">Mantenimiento</a></li>
+            <li><a href="servicios.html">Gestión activos</a></li>
+            <li><a href="servicios.html">Arriendo</a></li>
+            <li><a href="servicios.html">Fabricación</a></li>
+            <li><a href="moncon.html">MONCON 24/7</a></li>
+          </ul>
+        </nav>
+        <nav class="ft-col" aria-label="Empresa">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="moncon.html">MONCON</a></li>
+            <li><a href="equipos.html">Equipos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="ft-col">
+          <h4>Contacto</h4>
+          <div class="ft-ci"><span class="fi" aria-hidden="true">📞</span><a href="tel:+56975442496">+56 9 7544 2496</a></div>
+          <div class="ft-ci"><span class="fi" aria-hidden="true">✉️</span><a href="mailto:gerencia@mhproyectos.cl">gerencia@mhproyectos.cl</a></div>
+          <div class="ft-ci"><span class="fi" aria-hidden="true">📍</span><span>Chicureo, Colina · CL</span></div>
+          <div class="ft-map">
+            <iframe
+              src="https://maps.google.com/maps?q=Chicureo%2C+Colina%2C+RM%2C+Chile&output=embed&z=13"
+              width="100%"
+              height="160"
+              style="border:0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación MHP SPA — Chicureo, Colina"
+              aria-label="Mapa de ubicación en Chicureo, Colina, Chile"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="ft-bar">
+        <span>© 2026 MHP SPA — Todos los derechos reservados</span>
+        <span><a href="#">Privacidad</a><a href="#">Términos</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/56975442496" class="whatsapp-float" aria-label="Contactar por WhatsApp" rel="noopener noreferrer" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+  <script>
+  const rutInput = document.getElementById('f-rut');
+  if (rutInput) {
+    rutInput.addEventListener('input', function(e) {
+      let v = e.target.value.replace(/[^0-9kK]/g, '');
+      if (v.length > 9) v = v.slice(0, 9);
+      let body = v.slice(0, -1);
+      let dv   = v.slice(-1).toUpperCase();
+      let formatted = '';
+      if (body.length > 0) {
+        let reversed = body.split('').reverse();
+        for (let i = 0; i < reversed.length; i++) {
+          if (i > 0 && i % 3 === 0) formatted = '.' + formatted;
+          formatted = reversed[i] + formatted;
+        }
+        if (dv) formatted += '-' + dv;
+      }
+      e.target.value = formatted;
+    });
+  }
+
+  if (window.location.search.includes('enviado=1')) {
+    document.getElementById('formBody').style.display = 'none';
+    document.getElementById('formHeader').style.display = 'none';
+    document.getElementById('formSuccess').classList.add('show');
+  }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
