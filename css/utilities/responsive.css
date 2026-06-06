@@ -5,9 +5,6 @@
    ============================================================ */
 
 @media (max-width: 900px) {
-  /* Nav */
-  .nav-links { display: none; }
-
   /* Services */
   .srv-grid { grid-template-columns: 1fr; }
 

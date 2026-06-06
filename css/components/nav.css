@@ -107,3 +107,81 @@
 }
 
 .nav-cta::after { display: none !important; }
+
+/* ── Hamburger button ── */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 200;
+}
+
+.nav-burger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.nav.sc .nav-burger span { background: var(--td); }
+
+/* X animation when open */
+.nav.open .nav-burger span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav.open .nav-burger span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav.open .nav-burger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* ── Mobile menu overlay ── */
+@media (max-width: 900px) {
+  /* Burger escapes nav stacking context via position:fixed */
+  .nav-burger {
+    display: flex;
+    position: fixed;
+    right: 1.5rem;
+    top: 0.85rem;
+    z-index: 300;
+  }
+
+  /* Burger spans siempre blancas cuando el menú está abierto */
+  .nav.open .nav-burger span { background: #fff !important; }
+
+  .nav-links {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    background: var(--td);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    z-index: 250;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .nav.open .nav-links {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-links a {
+    font-size: 1.6rem !important;
+    color: rgba(255,255,255,0.85) !important;
+    font-weight: 800 !important;
+  }
+
+  .nav-links a:hover { color: #fff !important; }
+
+  .nav-links a.nav-cta {
+    font-size: 1.2rem !important;
+    padding: 12px 32px !important;
+    margin-top: 0.5rem;
+  }
+}
