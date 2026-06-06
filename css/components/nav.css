@@ -137,6 +137,11 @@
 .nav.open .nav-burger span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .nav.open .nav-burger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
+/* Eliminar backdrop-filter cuando el menú está abierto:
+   backdrop-filter convierte al nav en containing block de hijos
+   position:fixed, rompiendo el overlay de pantalla completa */
+.nav.open { backdrop-filter: none !important; }
+
 /* ── Mobile menu overlay ── */
 @media (max-width: 900px) {
   /* Burger escapes nav stacking context via position:fixed */
