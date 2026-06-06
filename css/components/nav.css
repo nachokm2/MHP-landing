@@ -141,7 +141,7 @@
   display: none;
   position: fixed;
   inset: 0;
-  background: var(--td);
+  background: #0d1410;
   flex-direction: column;
   align-items: center;
   justify-content: center;
