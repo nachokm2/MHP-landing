@@ -15,32 +15,33 @@ export function initNav() {
     update();
   }
 
-  // Hamburger toggle
+  // Hamburger + mobile overlay
   const burger = document.getElementById('navBurger');
   if (burger) {
+    // Crear overlay a nivel del body (evita problemas con backdrop-filter del nav)
+    const overlay = document.createElement('div');
+    overlay.className = 'mobile-overlay';
+    const sourceLinks = nav.querySelector('.nav-links');
+    if (sourceLinks) overlay.appendChild(sourceLinks.cloneNode(true));
+    document.body.appendChild(overlay);
+
+    const close = () => {
+      nav.classList.remove('open');
+      overlay.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
+
     burger.addEventListener('click', () => {
-      const isOpen = nav.classList.toggle('open');
+      const isOpen = !overlay.classList.contains('open');
+      nav.classList.toggle('open', isOpen);
+      overlay.classList.toggle('open', isOpen);
       burger.setAttribute('aria-expanded', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
-    // Close on link click
-    nav.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('open');
-        burger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      });
-    });
-
-    // Close on outside click
-    document.addEventListener('click', e => {
-      if (nav.classList.contains('open') && !nav.contains(e.target)) {
-        nav.classList.remove('open');
-        burger.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      }
-    });
+    overlay.querySelectorAll('a').forEach(link => link.addEventListener('click', close));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
   }
 
   // Active page link
