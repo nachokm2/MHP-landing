@@ -136,6 +136,12 @@
 .nav.open .nav-burger span:nth-child(2) { opacity: 0; }
 .nav.open .nav-burger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); background: #fff; }
 
+/* Nav por encima del overlay cuando el menú está abierto */
+.nav.open {
+  z-index: 9999;
+  backdrop-filter: none !important;
+}
+
 /* ── Mobile overlay — generado en el body por JS, sin padre con backdrop-filter ── */
 .mobile-overlay {
   display: none;
