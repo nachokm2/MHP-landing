@@ -173,7 +173,14 @@
 }
 
 @media (max-width: 900px) {
-  .nav-burger  { display: flex; }
-  .nav-links   { display: none; }
-  .mobile-overlay { display: flex; }
+  .nav-burger        { display: flex; }
+  .nav .nav-links    { display: none; }
+  .mobile-overlay    { display: flex; }
+
+  .mobile-overlay .nav-links {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 }
